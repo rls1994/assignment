@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Seddit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- You can add your styles and scripts here -->
+    <script type="module" src="src/helpers.js"></script>
+    <script type="module" src="src/axios.js"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"></script>
+  
+    <!-- font awsome for icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+      crossorigin="anonymous">
+
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/provided.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/post.css" />
+</head>
+
+<body>
+    <div id="root">
+        <!-- your JavaScript should inject your main app here -->
+        <!-- The below HTML will not be available in the demo environment -->
+        <!-- Your app should be able to dynamically generate something like the below  -->
+        <header class='banner' id="nav">
+            <h1 id="logo" class="flex-center">Seddit</h1>
+            <ul class='nav'>
+                <li class="nav-item">
+                    <input id="search" data-id-search placeholder="Search Seddit" type="search" />
+                </li>
+                <li class='nav-item'>
+                    <button data-id-login class="button button-primary">Log In</button>
+                </li>
+                <li class='nav-item'>
+                    <button data-id-signup class="button button-secondary">Sign Up</button>
+                </li>
+            </ul>
+        </header>
+        <main role='main'>
+            <ul id="feed" data-id-feed>
+                <div class="feed-header">
+                    <h3 class="feed-title alt-text">Popular posts</h3>
+                    <button class="button button-secondary">Post</button>
+                </div>
+                <li class="post" data-id-post>
+                    <div class="vote" data-id-upvotes></div>
+                    <div class="content">
+                        <h4 data-id-title class="post-title alt-text">Avenger’s Endgame Officially Passes Avatar To Become The
+                            Highest Grossing Movie Of All Time</h4>
+                        <p class="post-author" data-id-author>Posted by @some_dude69</p>
+                    </div>
+                </li>
+                <li class="post" data-id-post>
+                    <div class="vote" data-id-upvotes></div>
+                    <div class="content">
+                        <h4 data-id-title class="post-title alt-text">Avenger’s Endgame Officially Passes Avatar To Become The
+                            Highest Grossing Movie Of All Time</h4>
+                        <p class="post-author" data-id-author>Posted by @some_dude69</p>
+                    </div>
+                </li>
+                <li class="post" data-id-post>
+                    <div class="vote" data-id-upvotes></div>
+                    <div class="content">
+                        <h4 data-id-title class="post-title alt-text">Avenger’s Endgame Officially Passes Avatar To Become The
+                            Highest Grossing Movie Of All Time</h4>
+                        <p class="post-author" data-id-author>Posted by @some_dude69</p>
+                    </div>
+                </li>
+                <li class="post" data-id-post>
+                    <div class="vote" data-id-upvotes></div>
+                    <div class="content">
+                        <h4 data-id-title class="post-title alt-text">Avenger’s Endgame Officially Passes Avatar To Become The
+                            Highest Grossing Movie Of All Time</h4>
+                        <p class="post-author" data-id-author>Posted by @some_dude69</p>
+                    </div>
+                </li>
+                <li class="post" data-id-post>
+                    <div class="vote" data-id-upvotes></div>
+                    <div class="content">
+                        <h4 data-id-title class="post-title alt-text">Avenger’s Endgame Officially Passes Avatar To Become The
+                            Highest Grossing Movie Of All Time</h4>
+                        <p class="post-author" data-id-author>Posted by @some_dude69</p>
+                    </div>
+                </li>
+                <li class="post" data-id-post>
+                    <div class="vote" data-id-upvotes></div>
+                    <div class="content">
+                        <h4 data-id-title class="post-title alt-text">Avenger’s Endgame Officially Passes Avatar To Become The
+                            Highest Grossing Movie Of All Time</h4>
+                        <p class="post-author" data-id-author>Posted by @some_dude69</p>
+                    </div>
+                </li>
+                <li class="post" data-id-post>
+                    <div class="vote" data-id-upvotes></div>
+                    <div class="content">
+                        <h4 data-id-title class="post-title alt-text">Avenger’s Endgame Officially Passes Avatar To Become The
+                            Highest Grossing Movie Of All Time</h4>
+                        <p class="post-author" data-id-author>Posted by @some_dude69</p>
+                    </div>
+                </li>
+            </ul>
+        </main>
+        <footer>
+            <p>Seddit example</p>
+        </footer>
+    </div>
+    <script type="module" src="src/index.js"></script>
+</body>
+
+</html>
